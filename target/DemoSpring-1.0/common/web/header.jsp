@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%--<%@page import="com.example.utils.SecurityUtil" %>--%>
+<%@page import="com.example.utils.SecurityUtil" %>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -25,10 +25,10 @@
                 </security:authorize>
                 <security:authorize access="isAuthenticated()">
                     <li class="nav-item">
-<%--                        <a class="nav-link" href="#">Welcome <%=SecurityUtil.getPrincipal().getFullName()%></a>--%>
+                        <a class="nav-link" href="#">Welcome <%=SecurityUtil.getPrincipal().getUsername()%></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<c:url value="/thoat" />">Thoát</a>
+                        <a class="nav-link" href="<c:url value="/j_spring_security_logout" />">Thoát</a>
                     </li>
                 </security:authorize>
             </ul>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 		 pageEncoding="UTF-8"%>
-<%--<%@page import="com.example.utils.SecurityUtil" %>--%>
+<%@page import="com.example.utils.SecurityUtil" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <div id="navbar" class="navbar navbar-default          ace-save-state">
@@ -17,10 +17,10 @@
 			<ul class="nav ace-nav">
 				<li class="light-blue dropdown-modal">
 					<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-<%--						Xin chào, <%=SecurityUtil.getPrincipal().getFullName()%>--%>
+						Xin chào, <%=SecurityUtil.getPrincipal().getUsername()%>
 					</a>
 				<li class="light-blue dropdown-modal"><a
-						href='<c:url value="/thoat" />'> <i
+						href='<c:url value="/j_spring_security_logout" />'> <i
 						class="ace-icon fa fa-power-off"></i> Thoát
 				</a></li>
 				</li>

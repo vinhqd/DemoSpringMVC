@@ -13,4 +13,14 @@ public class HomeController {
         return new ModelAndView("web/home");
     }
 
+    @RequestMapping(value = "/dang-nhap", method = RequestMethod.GET)
+    public ModelAndView loginPage() {
+        return new ModelAndView("login");
+    }
+
+    @RequestMapping(value = "/access-denied", method = RequestMethod.GET)
+    public ModelAndView accessDenied() {
+        return new ModelAndView("redirect:/dang-nhap?accessDenied");
+    }
+
 }
